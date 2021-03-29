@@ -2,6 +2,18 @@
 <html>
 <body>
   <script>document.write(Date());</script>
+  <script>
+    function androidOrIOS() {
+      const userAgent = navigator.userAgent;
+      if(/android/i.test(userAgent)){
+        return 'android';
+      }
+      if(/iPad|iPhone|iPod/i.test(userAgent)){
+        return 'ios';
+      }
+    }
+    document.write(androidOrIOS);
+  </script>
   <h1>Testing</h1>
 </body>
 </html>
