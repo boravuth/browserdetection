@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <script>document.write(Date());</script>
   <script>
-    function androidOrIOS() {
+    function getDeviceOs() {
       const userAgent = navigator.userAgent;
       if(/android/i.test(userAgent)){
         return 'android';
@@ -13,8 +12,14 @@
         return 'others';
       }
     }
-    document.write(androidOrIOS());
+    let os = getDeviceOs();
+    if(os === 'android') {
+      window.location.href = "https://apps.apple.com/us/app/oracle-cloud-infrastructure/id1534250806";
+    } else if (os === 'android') {
+      window.location.href = "https://apps.apple.com/us/app/oracle-cloud-infrastructure/id1534250806";
+    } else {
+      window.location.href = "https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/mobile.htm";
+    }
   </script>
-  <h1>Testing</h1>
 </body>
 </html>
