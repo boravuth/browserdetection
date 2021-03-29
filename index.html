@@ -7,9 +7,10 @@
       const userAgent = navigator.userAgent;
       if(/android/i.test(userAgent)){
         return 'android';
-      }
-      if(/iPad|iPhone|iPod/i.test(userAgent)){
+      } else if(/iPad|iPhone|iPod/i.test(userAgent)){
         return 'ios';
+      } else {
+        return 'others';
       }
     }
     document.write(androidOrIOS);
